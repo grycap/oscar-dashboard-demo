@@ -140,12 +140,10 @@ export const MinioProvider = ({ children }: { children: React.ReactNode }) => {
 
     try {
       await createBucketsApi(bucketName,undefined)
-      //console.log(command)
       /*const command = new CreateBucketCommand({
         Bucket: bucketName,
-      });*/
-
-      //await client.send(command);
+      });
+      await client.send(command);*/
       alert.success("Bucket created successfully");
     } catch (error) {
       console.error(error);
@@ -160,8 +158,9 @@ export const MinioProvider = ({ children }: { children: React.ReactNode }) => {
 
     try {
       await deleteBucketsApi(bucketName)
-      // const command = new DeleteBucketCommand({ Bucket: bucketName });
-      //console.log(command)
+      /*const command = new DeleteBucketCommand({ Bucket: bucketName });
+      await client.send(command);*/
+
       alert.success("Bucket deleted successfully");
     } catch (error) {
       console.error(error);
