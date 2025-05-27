@@ -24,13 +24,14 @@ import JSZip from "jszip";
 import env from "@/env";
 import createBucketsApi from "@/api/buckets/createBucketsApi";
 import deleteBucketsApi from "@/api/buckets/deleteBucketsApi";
+import { Bucket as Bucket_oscar } from "@/pages/ui/services/models/service"
 
 export type MinioProviderData = {
   providerInfo: MinioStorageProvider;
   setProviderInfo: (providerInfo: MinioStorageProvider) => void;
   buckets: Bucket[];
   setBuckets: (buckets: Bucket[]) => void;
-  createBucket: (bucketName: string) => Promise<void>;
+  createBucket: (bucketName: Bucket_oscar) => Promise<void>;
   updateBuckets: () => Promise<void>;
   getBucketItems: (
     bucketName: string,
@@ -135,11 +136,11 @@ export const MinioProvider = ({ children }: { children: React.ReactNode }) => {
     setBuckets(buckets);
   }
 
-  async function createBucket(bucketName: string) {
+  async function createBucket(bucketName: Bucket_oscar) {
     if (!client) return;
 
     try {
-      await createBucketsApi(bucketName,undefined)
+      await createBucketsApi(bucketName)
       /*const command = new CreateBucketCommand({
         Bucket: bucketName,
       });
