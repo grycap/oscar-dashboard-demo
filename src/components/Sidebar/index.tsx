@@ -71,10 +71,10 @@ function AppSidebar() {
         case env.EGI_ISSUER:
           redurectURL = `${env.EGI_ISSUER}${env.url_logout}?client_id=${env.EGI_client_id}&post_logout_redirect_uri=${window.location.origin}`;
           break;
-        */
         case env.AI4EOSC_ISSUER:
           redurectURL = `${env.AI4EOSC_ISSUER}${env.url_logout}?client_id=${env.AI4EOSC_client_id}&post_logout_redirect_uri=${window.location.origin}`;
           break;
+        */
         case env.GRYCAP_ISSUER:
           redurectURL = `${env.GRYCAP_ISSUER}${env.url_logout}?client_id=${env.GRYCAP_client_id}&post_logout_redirect_uri=${window.location.origin}`;
           break;
