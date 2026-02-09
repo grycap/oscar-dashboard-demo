@@ -3,7 +3,6 @@ const env = {
     "EGI_client_id": "$EGI_CHECKIN_CLIENT_ID",
     "AI4EOSC_ISSUER":"$AI4EOSC_KEYCLOAK_ISSUER",
     "AI4EOSC_client_id":"$AI4EOSC_KEYCLOAK_CLIENT_ID",
-    "AI4EOSC_client_secret":"$AI4EOSC_KEYCLOAK_CLIENT_SECRET",
     "GRYCAP_ISSUER":"$GRYCAP_KEYCLOAK_ISSUER",
     "GRYCAP_client_id":"$GRYCAP_KEYCLOAK_CLIENT_ID",
     "provider_url": "/protocol/", 
